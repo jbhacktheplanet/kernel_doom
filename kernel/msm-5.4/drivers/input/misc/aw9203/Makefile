@@ -1,0 +1,4 @@
+#
+#
+
+obj-$(CONFIG_KEYBOARD_AW9203) += aw9203.o

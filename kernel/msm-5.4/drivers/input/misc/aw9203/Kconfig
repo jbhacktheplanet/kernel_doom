@@ -1,0 +1,8 @@
+
+config KEYBOARD_AW9203
+	bool "aw9203 capacitive touch controller"
+	default y
+	help
+	 aw9203
+
+

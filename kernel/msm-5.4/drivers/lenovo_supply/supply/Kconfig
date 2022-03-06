@@ -1,0 +1,28 @@
+# SPDX-License-Identifier: GPL-2.0-only
+menuconfig LENOVO_SUPPLY
+	tristate "Lenovo suply battery charger"
+	help
+	  Say Y here to enable Lenovo supply class support. This allows
+	  power supply (batteries, AC, USB) monitoring by userspace
+	  via sysfs and uevent (if available) and/or APM kernel interface
+	  (if selected below).
+
+if LENOVO_SUPPLY
+
+config BATTERY_FG_BQ27Z561
+	tristate "TI FG BQ27Z561"
+	help
+	  Say Y here to enable fg bq27z561.
+
+	  To compile the driver as a module, choose M here: the module will be
+	  called fg bq27z561.
+
+config BATTERY_FAC
+        tristate "Battery Factory upport"
+        default n
+        help
+          Say Y here to enable support for battery factory mode.
+
+#source "drivers/lenovo_supply/supply/ti/Kconfig"
+
+endif # LENOVO_SUPPLY

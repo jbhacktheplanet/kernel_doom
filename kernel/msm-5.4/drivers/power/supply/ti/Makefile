@@ -1,0 +1,1 @@
+obj-$(CONFIG_POWER_SUPPLY_FLASH_CHARGER)   += bq2589x_charger.o
